@@ -8,11 +8,11 @@ class CustomerBase(BaseModel):
     address: str
     payment_info: str
 
-
+#  This class inherits from OrderDetailBase and is used specifically for creating new order details.
 class CustomerCreate(CustomerBase):
     pass
 
-
+# This class is used for updating existing order details. Unlike the create class, all fields here are optiona
 class CustomerUpdate(BaseModel):
     customer_name: Optional[str] = None
     phone_number: Optional[int]
