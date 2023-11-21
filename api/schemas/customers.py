@@ -8,18 +8,18 @@ class CustomerBase(BaseModel):
     address: str
     payment_info: str
 
-#  This class inherits from OrderDetailBase and is used specifically for creating new order details.
+#  This class inherits from CustomerBase and doesn't add any additional fields. It's typically used for creating new customer records.
 class CustomerCreate(CustomerBase):
     pass
 
-# This class is used for updating existing order details. Unlike the create class, all fields here are optiona
+# This class is for updating an existing customer's information.
 class CustomerUpdate(BaseModel):
     customer_name: Optional[str] = None
     phone_number: Optional[int]
     address: Optional[str]
     payment_info: Optional[str]
 
-
+# This class also inherits from CustomerBase but adds an id field. 
 class Customer(CustomerBase):
     id: int
 
