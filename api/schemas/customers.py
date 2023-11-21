@@ -1,7 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
 
-
+# This is the base class for representing a customer.
 class CustomerBase(BaseModel):
     customer_name: str
     phone_number: Optional[int]
